@@ -1,0 +1,344 @@
+
+
+*{
+ margin:0;
+ padding:0;
+ box-sizing: border-box;
+ font-family: Cambria, Georgia, serif;
+
+}
+
+html, body{
+  height:100%;
+}
+
+
+body{
+
+  /* justify-content: center; */
+  /* align-items:center ; */
+  /* display: flex; */
+
+  /* Below just code examples templates to remember */
+  /* background-image: linear-gradient(to bottom right, purple, pink, purple, purple, pink); */
+  /* animation: bgGradAnim 30s ease-in-out infinite; */
+
+  animation: bgGradAnim 60s linear infinite;
+  
+  /* This solution here allows for gradient animated background but jumps between red and blue colour */
+  /* background: linear-gradient(225deg, violet 0%, red 20%, orange 40%, yellow 60%, green 70% , blue 80%, indigo 100%);
+  animation: moveGradient 5s linear infinite;
+  background-size: 1400% 1400%; */
+
+  
+}
+
+@keyframes bgGradAnim{
+
+  /* 0%{background-color: purple; top: 0px; left: 0px;  }
+
+  10%{background-color:blue; top: 1000px; left: 1000px;} */
+  
+  0%{background-color: purple;}
+
+  15%{background-color:blue;}
+
+	20%{background-color:lightblue;}
+
+	30%{background-color:green;}
+
+	40%{background-color:lightgreen;}
+
+	50%{background-color:yellow;} /*<-- give opacity*/
+  
+	70%{background-color:orange;}
+
+  80%{background-color:orangered;}
+
+  90%{background-color:#ff4a4a;}
+
+  100%{background-color: purple;}
+}
+
+/* The code below is a part of animated gradient but the bug is that it jumps from blue to red skipping purple! */
+/* @keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+} */
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  /* padding: 15px, 8%;
+  background-color: white; */
+  margin-left:-50px;
+  
+
+}
+
+.navbar ul{
+  margin-top:14%;
+  margin-left:30%;
+  display:flex;
+  
+  
+}
+
+.navbar ul li:hover{
+  opacity:0.7;
+  cursor:pointer;
+}
+
+/* To remember later - to add @media to make menu items arrange like blocks */
+
+.navbar ul li{
+  /* display: inline-block; */
+  color: #000; 
+  /* box-shadow: 0 0 30px 0 rgba(0,0,0,0.0); */
+  border-radius: 10px;
+  border: solid white;
+  min-height:40px;
+  min-width:100px;
+  max-width:200px;
+  text-align: center;
+  /* float:left; */
+  list-style:none;
+  margin-left:10px;
+  margin-top:10px;
+  padding-top:5px;
+}
+
+.navbar img{
+  width: 200px;
+  margin-left:20%;
+  margin-top:2%;
+}
+
+/* .lastLi{
+  clear:both;
+} */
+
+.liHome{
+  background-image: linear-gradient(to bottom, yellow, orange);
+}
+.liGame{
+  background-image: linear-gradient(to bottom, yellow, orange);
+}
+.liSettings{
+  background-image: linear-gradient(to bottom, yellow, orange);
+}
+.liAbout{
+  background-image: linear-gradient(to bottom, yellow, orange);
+}
+
+.landingHeader{
+  margin-top:50px;
+  color:white;
+  font-size:48px;
+  text-shadow:2px 2px black;
+}
+
+.startBtn{
+  background-image: linear-gradient(to bottom, green, lightgreen);
+  color:white;
+  font-size:24px;
+  width:160px;
+  height:60px;
+  margin:20px;
+
+  /* does not work: */
+  font-weight:900;
+
+  /* does not work */
+  outline:0;
+
+  border-radius: 10px;
+}
+
+.startBtn:hover{
+  opacity:0.7;
+  cursor:pointer;
+}
+
+.MJEdescription{
+  color:black;
+  margin-top:30px;
+  margin-bottom:30px;
+  max-width:70%;
+  /* text-align: center;
+  justify-content: center;
+  align-items:center ; */
+  font-family: Calibri, sans-serif;
+  
+}
+
+.stylePara{
+  margin-right:auto;
+  margin-left:auto;
+  text-align: center;
+  justify-content: center;
+  display: flex; 
+
+}
+
+/* .menuItems{
+  display: block;
+}
+
+.logoItem{
+  display:block;
+} */
+
+/* here I add a responsive navbar for small screens (flex->to->block) */
+@media (max-width: 768px) {
+
+      .navbar{
+        width: 100%;
+        display: block;
+        justify-content: center;
+        text-align: center;
+        /* padding: 15px, 8%;
+        background-color: white; */
+        margin-left:-50px;
+        
+
+      }
+
+      .navbar ul{
+        margin-top:14%;
+        margin-left:30%;
+        display:block;
+        
+        
+      }
+
+  }
+
+
+  .container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%;
+    height: 40vh; */
+  }
+
+.settingsHeading{
+  margin-top:5%;
+  margin-bottom: 50px;
+  color:white;
+  font-size:48px;
+  text-shadow:2px 2px black;
+}
+
+.formsSideBySide{
+  display:inline-block;
+  margin:40px;
+}
+
+
+/* syling SETTINGS forms:  */
+.stylingForm1{
+  display:flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- */
+/* DEFAULT and OLD: */
+/* -------------------------- */
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+
+
+
+
+

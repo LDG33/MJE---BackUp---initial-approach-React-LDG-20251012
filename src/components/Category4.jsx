@@ -1,61 +1,185 @@
 import React from 'react'
 import { useState } from 'react';
 
-function NbOfTiles3func() {
-  const [preferences, setPreferences] = useState({
-    easy_x12: false,
-    medium_x24: false,
-    hard_x48: false
-  });
+
+
+function CategoryFunc() {
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   const handleChange = (e) => {
-    const { name, checked } = e.target;
-    setPreferences(prev => ({
-      ...prev,
-      [name]: checked
-    }));
+    setSelectedCategory(e.target.value);
   };
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // alert(`You selected: ${selectedOption}`);
+  // };
+
   return (
+    // <form onClick={handleSubmit}  className="stylingForm1">
     <form className="stylingForm1">
+
       <label>
         <input
-          type="checkbox"
-          name="easy_x12"
-          checked={preferences.easy_x12}
+          type="radio"
+          name="category"
+          value="fruitsVeg"
+          checked={selectedCategory === 'fruitsVeg'}
           onChange={handleChange}
         />
-        Easy_x12
+        Fruits and Veg
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="category"
+          value="numbers"
+          checked={selectedCategory === 'numbers'}
+          onChange={handleChange}
+        />
+        Numbers
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="category"
+          value="actions"
+          checked={selectedCategory === 'actions'}
+          onChange={handleChange}
+        />
+        Actions
       </label>
       <label>
         <input
-          type="checkbox"
-          name="medium_x16"
-          checked={preferences.medium_x16}
+          type="radio"
+          name="category"
+          value="homeware"
+          checked={selectedCategory === 'homeware'}
           onChange={handleChange}
         />
-        Medium_x16
+        Homeware
       </label>
+
       <label>
         <input
-          type="checkbox"
-          name="hard_x24"
-          checked={preferences.hard_x24}
+          type="radio"
+          name="category"
+          value="transport"
+          checked={selectedCategory === 'transport'}
           onChange={handleChange}
         />
-        Hard_x24
+        Transport
       </label>
+
+      <label>
+        <input
+          type="radio"
+          name="category"
+          value="moods"
+          checked={selectedCategory === 'moods'}
+          onChange={handleChange}
+        />
+        Moods
+      </label>
+
+      <p>{selectedCategory || 'none'}!</p>
 
     </form>
   );
 }
 
 
-
 const Category4 = () => {
   return (
-    <div>Category4</div>
+    <div>{CategoryFunc()}</div>
   )
 }
 
 export default Category4
+
+
+
+// this is an OLD approach (LDG 202510012):
+
+// function CategoryFunc() {
+//   const [preferences, setPreferences] = useState({
+//     fruitsVeg: '',
+//     numbers: '',
+//     actions: '',
+//     homeware: '',
+//     transport: '',
+//     moods: '',
+
+
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, checked } = e.target;
+//     setPreferences(prev => ({
+//       ...prev,
+//       [name]: checked
+//     }));
+//   };
+
+//   return (
+//     <form className="stylingForm1">
+//       <label>
+//         <input
+//           type="radio"
+//           name="fruitsVeg"
+//           checked={preferences.fruitsVeg}
+//           onChange={handleChange}
+//         />
+//         Fruits and Veg
+//       </label>
+//       <label>
+//         <input
+//           type="radio"
+//           name="numbers"
+//           checked={preferences.numbers}
+//           onChange={handleChange}
+//         />
+//         Numbers
+//       </label>
+//       <label>
+//         <input
+//           type="radio"
+//           name="actions"
+//           checked={preferences.actions}
+//           onChange={handleChange}
+//         />
+//         Actions
+//       </label>
+//       <label>
+//         <input
+//           type="radio"
+//           name="homeware"
+//           checked={preferences.homeware}
+//           onChange={handleChange}
+//         />
+//         Homeware
+//       </label>
+//       <label>
+//         <input
+//           type="radio"
+//           name="transport"
+//           checked={preferences.transport}
+//           onChange={handleChange}
+//         />
+//         Transport
+//       </label>
+//       <label>
+//         <input
+//           type="radio"
+//           name="moods"
+//           checked={preferences.moods}
+//           onChange={handleChange}
+//         />
+//         Moods
+//       </label>
+
+//     </form>
+//   );
+// }

@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import LangTypes1 from '../components/LangTypes1';
 import LangHowMany2 from '../components/LangHowMany2';
 import NbOfTiles3 from '../components/NbOfTiles3';
+import Category4 from '../components/Category4';
+import Uncovered5 from '../components/Uncovered5';
 
 
 
@@ -26,10 +28,10 @@ const Settings = () => {
             <NbOfTiles3/>
           </div>
           <div className="formsSideBySide">
-            <Template/>
+            <Category4/>
           </div>
           <div className="formsSideBySide">
-            <Template/>
+            <Uncovered5/>
           </div>
         
       </div>

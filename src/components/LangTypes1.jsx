@@ -22,33 +22,40 @@ function CheckLanguages() {
     <form className="stylingForm1">
       <label>
         <input
+          checked={true}
+          disabled={true}
           type="checkbox"
           name="english"
-          checked={preferences.english}
+          // checked={preferences.english}
           onChange={handleChange}
         />
         English
       </label>
       <label>
         <input
+          checked={true}
+          disabled={true}
           type="checkbox"
-          name="french"
-          checked={preferences.french}
+          name="spanish"
+          // checked={preferences.spanish}
           onChange={handleChange}
         />
-        French
+        Spanish
       </label>
       <label>
         <input
+          checked={true}
+          disabled={true}
           type="checkbox"
           name="polish"
-          checked={preferences.polish}
+          // checked={preferences.polish}
           onChange={handleChange}
         />
         Polish
       </label>
       <label>
         <input
+          disabled={true}
           type="checkbox"
           name="german"
           checked={preferences.german}
@@ -58,12 +65,13 @@ function CheckLanguages() {
       </label>
       <label>
         <input
+          disabled={true}
           type="checkbox"
-          name="spanish"
-          checked={preferences.spanish}
+          name="french"
+          checked={preferences.french}
           onChange={handleChange}
         />
-        Spanish
+        French
       </label>
     </form>
   );

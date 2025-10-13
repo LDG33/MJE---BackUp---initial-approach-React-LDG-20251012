@@ -8,6 +8,7 @@ function CategoryFunc() {
 
   const handleChange = (e) => {
     setSelectedCategory(e.target.value);
+    e.preventDefault();
   };
 
   // const handleSubmit = (e) => {

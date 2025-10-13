@@ -7,6 +7,7 @@ function FlipFunc() {
 
   const handleChange = (e) => {
     setSelectedFlip(e.target.value);
+    e.preventDefault();
   };
 
   return (

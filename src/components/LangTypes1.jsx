@@ -16,6 +16,7 @@ function CheckLanguages() {
       ...prev,
       [name]: checked
     }));
+    e.preventDefault();
   };
 
   return (

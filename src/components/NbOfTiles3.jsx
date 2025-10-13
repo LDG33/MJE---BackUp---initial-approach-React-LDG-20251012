@@ -9,6 +9,7 @@ function NbOfTiles3func() {
 
   const handleChange = (e) => {
     setSelectedTiles(e.target.value);
+    e.preventDefault();
   };
 
   return (

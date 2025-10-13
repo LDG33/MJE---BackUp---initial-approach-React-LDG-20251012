@@ -8,6 +8,7 @@ function HowManyLang() {
 
   const handleChange = (e) => {
     setSelectedNbOfLang(e.target.value);
+    e.preventDefault();
   };
 
   return (

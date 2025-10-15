@@ -319,6 +319,10 @@ BELOW - styling game area - copied from separte project - LDG - 20251013
   background-color: greenyellow;
 }
 
+.card.vanish{
+  opacity:0;
+}
+
 
 
 /* --------------------------------------------------------------

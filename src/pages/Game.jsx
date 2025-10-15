@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Card from '../components/Card'
-
+import { useRef, useEffect } from 'react';
 
 
 
@@ -40,6 +40,21 @@ const Game = () => {
 
     ].sort(()=>Math.random()-0.5))
 
+    //20251015 whole journey: below // finally got it - I use state to check if button that I clicked has got a vanish class (true or false)!!!
+    // the opacity check for disabling elements properly (recovery of tiles) 20251015 LDG
+    //checking the condition to run the event - based on the fact that class vanish has always 0 opacity
+    function vanishCheck(id)
+    {
+          //old version it searches vanish everywhere - therefore bloks the entire game if there is one vanish already
+          // const statExist = items.some(stat => stat.stat.includes('vanish'));
+          const statExist = items[id].stat.includes('vanish');
+          alert(statExist);
+          return statExist;
+          //mind it works also on the backgroud - a weird issue...
+
+    }
+    
+
     const [prevprev, setPrevprev] = useState(-1);
     const [prev, setPrev] = useState(-2);
 
@@ -53,8 +68,20 @@ const Game = () => {
           items[prevprev].stat = "correct";
           items[prev].stat = "correct";
           setItems([...items])
-          setPrev(-2);
-          setPrevprev(-1);
+          // setPrev(-2);
+          // setPrevprev(-1);
+          
+
+          setTimeout(()=>{
+          items[current].stat = "vanish"
+          items[prevprev].stat = "vanish"
+          items[prev].stat = "vanish"
+          setPrev(-2),
+          setPrevprev(-1)
+
+          },1000)
+
+
         }
         else{
           items[current].stat = "wrong";
@@ -69,36 +96,29 @@ const Game = () => {
               setPrev(-2),
               setPrevprev(-1)
           },1000)
+
         }
     }
 
     function handleClick(id){
-      if(prevprev === -1)
-      {
-
-        
-          alert('kliniete')
-          items[id].stat = active
-          setItems([...items])
-          setPrevprev(id);
-
-        if(prev === -2)
-        {
-          // checkTwo(id)
-          alert('kliniete2')
-          items[id].stat = active
-          setItems([...items])
-          setPrev(id);
+    if(!vanishCheck(id)){
+          if(prev == -2)
+          {    
+            items[id].stat = 'active'
+            setItems([...items])
+            setPrev(-1);
+            setPrevprev(id);
+          }
+          else if(prev == -1)
+          {
+            items[id].stat = 'active'
+            setItems([...items])
+            setPrev(id);
+          }
+          else{
+            checkThree(id);
+          }
         }
-
-      }
-      else{
-        checkThree(id);
-      }
-
-      // items[id].stat="active";
-      // setItems([...items])
-
     }
 
   return (

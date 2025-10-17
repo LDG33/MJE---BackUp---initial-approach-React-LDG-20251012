@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -13,7 +13,10 @@ import About from './pages/About';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  
+
+
 
   return (
     <>

@@ -13,7 +13,7 @@ import Uncovered5 from '../components/Uncovered5';
 const Settings = () => {
   return (
             
-    <div>
+    <div className="settingsContainer">
       <h1 className="settingsHeading">Settings</h1>
 
       <div>

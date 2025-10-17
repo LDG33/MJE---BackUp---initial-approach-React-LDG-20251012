@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <>
-    <article>
+    <article className="settingsContainer" >
         <h1 className="landingHeader">Play & Learn Languages Faster</h1>
         <div className="stylePara">
             <p className="MJEdescription">MJE stands for MahJong Europa. It is a website that promotes alternative approach to learn 

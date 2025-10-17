@@ -280,6 +280,7 @@ BELOW - styling game area - copied from separte project - LDG - 20251013
 
 .gameContainer{
   margin-top:100px;
+  margin-bottom:100px;
   height:400px;
   width:700px;
   /* background-color:red; */
@@ -287,6 +288,24 @@ BELOW - styling game area - copied from separte project - LDG - 20251013
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1em;
+  animation: slowFocus 5s linear;
+}
+
+.settingsContainer{
+  animation: slowFocus 1s linear;
+}
+
+@keyframes slowFocus{
+
+  /* 0%{background-color: purple; top: 0px; left: 0px;  }
+
+  10%{background-color:blue; top: 1000px; left: 1000px;} */
+  
+  0%{opacity: 0;}
+
+  50%{opacity:0.5;}
+
+  100%{opacity:1;}
 }
 
 .card{
@@ -322,7 +341,6 @@ BELOW - styling game area - copied from separte project - LDG - 20251013
 .card.vanish{
   opacity:0;
 }
-
 
 
 /* --------------------------------------------------------------

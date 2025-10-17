@@ -213,37 +213,37 @@ export default Game
 // ----------------------------------------------------
 
 
-    const [moods, setMoods] = useState([
-        {id:1, text:'smutny', icon:'😢', stat: "" },
-        {id:1, text:'sad', icon:'😢', stat: "" },
-        {id:1, text:'triste', icon:'😢', stat: "" },
-        {id:2, text:'szczęśliwy', icon:'😄', stat: "" },
+    // const [moods, setMoods] = useState([
+    //     {id:1, text:'smutny', icon:'😢', stat: "" },
+    //     {id:1, text:'sad', icon:'😢', stat: "" },
+    //     {id:1, text:'triste', icon:'😢', stat: "" },
+    //     {id:2, text:'szczęśliwy', icon:'😄', stat: "" },
 
-        {id:2, text:'happy', icon:'😄', stat: "" },
-        {id:2, text:'feliz', icon:'😄', stat: "" },
-        {id:3, text:'znudzony', icon:'😐', stat: "" },
-        {id:3, text:'bored', icon:'😐', stat: "" },
+    //     {id:2, text:'happy', icon:'😄', stat: "" },
+    //     {id:2, text:'feliz', icon:'😄', stat: "" },
+    //     {id:3, text:'znudzony', icon:'😐', stat: "" },
+    //     {id:3, text:'bored', icon:'😐', stat: "" },
 
-        {id:3, text:'aburrido', icon:'😐', stat: "" },
-        {id:4, text:'zły', icon:'😠', stat: "" },
-        {id:4, text:'angry', icon:'😠', stat: "" },
-        {id:4, text:'enojado', icon:'😠', stat: "" },
+    //     {id:3, text:'aburrido', icon:'😐', stat: "" },
+    //     {id:4, text:'zły', icon:'😠', stat: "" },
+    //     {id:4, text:'angry', icon:'😠', stat: "" },
+    //     {id:4, text:'enojado', icon:'😠', stat: "" },
 
-        {id:5, text:'przestraszony', icon:'😱', stat: "" },
-        {id:5, text:'scared', icon:'😱', stat: "" },
-        {id:5, text:'asustado', icon:'😱', stat: "" },
-        {id:6, text:'senny', icon:'😴', stat: "" },
+    //     {id:5, text:'przestraszony', icon:'😱', stat: "" },
+    //     {id:5, text:'scared', icon:'😱', stat: "" },
+    //     {id:5, text:'asustado', icon:'😱', stat: "" },
+    //     {id:6, text:'senny', icon:'😴', stat: "" },
 
-        {id:6, text:'sleepy', icon:'😴', stat: "" },
-        {id:6, text:'somnoliento', icon:'😴', stat: "" },
-        {id:7, text:'zadowolony', icon:'😌', stat: "" },
-        {id:7, text:'satisfied', icon:'😌', stat: "" },
+    //     {id:6, text:'sleepy', icon:'😴', stat: "" },
+    //     {id:6, text:'somnoliento', icon:'😴', stat: "" },
+    //     {id:7, text:'zadowolony', icon:'😌', stat: "" },
+    //     {id:7, text:'satisfied', icon:'😌', stat: "" },
 
-        {id:7, text:'satisfecho', icon:'😌', stat: "" },
-        {id:8, text:'szalony', icon:'🤪', stat: "" },
-        {id:8, text:'crazy', icon:'🤪', stat: "" },
-        {id:8, text:'loco', icon:'🤪', stat: "" }
+    //     {id:7, text:'satisfecho', icon:'😌', stat: "" },
+    //     {id:8, text:'szalony', icon:'🤪', stat: "" },
+    //     {id:8, text:'crazy', icon:'🤪', stat: "" },
+    //     {id:8, text:'loco', icon:'🤪', stat: "" }
 
-    ].sort(()=>Math.random()-0.5))
+    // ].sort(()=>Math.random()-0.5))
 
 

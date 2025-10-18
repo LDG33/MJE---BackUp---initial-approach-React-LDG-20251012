@@ -11,6 +11,8 @@ import Uncovered5 from '../components/Uncovered5';
 
 
 const Settings = () => {
+
+
   return (
             
     <div className="settingsContainer">
@@ -36,7 +38,11 @@ const Settings = () => {
         
       </div>
 
-      <Link to="/game">
+
+
+
+
+      <Link to="/playmoods">
       <button className="startBtn">
         Play
       </button>

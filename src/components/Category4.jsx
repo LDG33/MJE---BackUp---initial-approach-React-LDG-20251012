@@ -4,8 +4,9 @@ import { useState } from 'react';
 
 
 function CategoryFunc() {
-  const [selectedCategory, setSelectedCategory] = useState('');
 
+  
+  const [selectedCategory, setSelectedCategory] = useState('');
   const handleChange = (e) => {
     setSelectedCategory(e.target.value);
     e.preventDefault();
@@ -24,11 +25,22 @@ function CategoryFunc() {
         <input
           type="radio"
           name="category"
-          value="fruitsVeg"
-          checked={selectedCategory === 'fruitsVeg'}
+          value="fruits"
+          checked={selectedCategory === 'fruits'}
           onChange={handleChange}
         />
-        Fruits and Veg
+        Fruits
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          name="category"
+          value="vegetables"
+          checked={selectedCategory === 'vegetables'}
+          onChange={handleChange}
+        />
+        Vegetables
       </label>
 
       <label>
